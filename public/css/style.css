@@ -76,7 +76,8 @@ main h2{
     --max-width: 500px;
     width: min(var(--max-width), 90%);
     margin-inline: auto;
-    padding: 1rem 0;
+    margin-top: 1rem;
+
 }
 
 .product__image {
@@ -88,6 +89,7 @@ main h2{
     margin-top: 2px;
     padding: 1rem 0 1rem 1rem ;
     text-align: left;
+    display: none;
 }
 
 .product__text-icon {
@@ -117,13 +119,19 @@ main h2{
 
 .product__text-name {
     margin-top: 1.2rem;
-    display: none;
+    
+
 }
 
 @media (min-width: 361px) {
-    .product__text-name {
+    .product {
+        box-shadow: 1px 1px 10px #666;
+    }
+    
+    .product__text {
         display: block;
     }
+
 }
 
 

@@ -1,3 +1,14 @@
+:root {
+    --clr-amarillo: #EAC926;
+    --clr-azul: #03264C;
+    --clr-celeste: #1259c3;
+    --clr-gris-oscuro: #666;
+    --clr-gris-claro: #ebebeb;
+    --clr-verde: #39b54a;
+
+}
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -6,11 +17,12 @@
 /* estilo del encabezado*/
 .banner{
     max-width: 100%;
+    display: block;
 }
 
 header{
     font-family: 'Roboto', sans-serif;
-    background-color: #EAC926;
+    background-color: var(--clr-amarillo);
     margin: 0%;
     padding: 3%;
     border: none;
@@ -42,42 +54,77 @@ header ul li a{
 .respmenu i {
     border-radius: 5px;
     color: white;
-    background-color: rgb(64, 99, 196);
+    background-color: var(--clr-celeste);
     padding: 15px;
     font-size: 20px;
 }
 /* estilo del cuerpo*/
 
 main{
-    background-color: #ebebeb;
-    width: 90%;
+    background-color: var(--clr-gris-claro);
+    /* width: 90%; */
     text-align: center;
+    margin: auto;
 }
 main h2{
     font-size: 24px;
     list-style: none;
     text-align: left;
-    color: #666;
+    color: var(--clr-gris-oscuro);
 }
-.product{
-    margin:10px;
+.product {
+    --max-width: 500px;
+    width: min(var(--max-width), 90%);
+    margin-inline: auto;
+    padding: 1rem 0;
 }
-.prod-img{
-    max-width: 100%;
-    border-bottom: black;
+
+.product__image {
+    display: block;
 }
-.prod-text{
-    
+
+.product__text{
     background-color: white;
+    margin-top: 2px;
+    padding: 1rem 0 1rem 1rem ;
+    text-align: left;
 }
+
+.product__text-icon {
+    border: solid 1px var(--clr-verde);
+    text-align: center;
+    height: 2.2rem;
+    width: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-bottom: .2rem;
+}
+
 .icons-cart {
-    color: #39b54a;
-    padding: 5px;
+    color: var(--clr-verde);
+    /* padding: 5px;
     border: solid 1px;
     border-radius: 100%;
     right: 10%;
+    line-height: 2; */
 }
 
+.product__text-offert {
+    color: var(--clr-verde);
+}
+
+.product__text-name {
+    margin-top: 1.2rem;
+    display: none;
+}
+
+@media (min-width: 361px) {
+    .product__text-name {
+        display: block;
+    }
+}
 
 
 /* estilo del pie*/

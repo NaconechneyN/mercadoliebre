@@ -163,44 +163,66 @@ main h2{
     text-align: left;
     color: var(--clr-gris-oscuro);
 }
+
+.container {
+    width: 98%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section {
+    padding-bottom: 4rem;
+}
+
+.section__title {
+    font-size: 24px;
+    padding: 1rem;
+}
+
 .product {
+    display: flex;
+    flex-direction: column;
     --max-width: 500px;
     width: min(var(--max-width), 90%);
     margin-inline: auto;
     margin-top: 1rem;
    
 }
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-}
+
 
 .product__image {
     display: block; 
-   
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
 }
 
 .product__text{
+    position: relative;;
     background-color: white;
     margin-top: 2px;
     padding: 1rem 0 1rem 1rem ;
     text-align: left;
-    display: flex;
 }
 
 .product__text-icon {
-    border: solid 1px var(--clr-verde);
-    text-align: center;
-    height: 2.2rem;
-    width: 2.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    margin-bottom: .2rem;
-    position: relative;
-    left: 90%;
-    top: -28px;
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid var(--clr-verde);
+    border-radius: 50%;
+    background-color: #ffffff;
+    right: 20px;
+    top: -15px;
 }
 
 .icons-cart {
@@ -212,33 +234,54 @@ main h2{
     line-height: 2; */
 }
 
+.product__text-price {
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.offert {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--clr-verde)
+}
+
+
 .product__text-offert {
     color: var(--clr-verde);
 }
 
 .product__text-name {
-    margin-top: 1.2rem;
-    
-
+    font-size: 16px;
+    color: var(--clr-gris-oscuro);
+    font-weight: 400;
+    margin-top: 1rem;
 }
 
-@media (min-width: 361px) {}
+@media (min-width: 361px) {
+    /* tablet */
+    .flex-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
     .product {
         box-shadow: 1px 1px 10px #666;
-        /* display: flex; */
-/*         flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: flex-center; */
-
+        flex: 40%
     }
-   
-    
-    /*.product__text {
-        display: block;
-      
-    }
+}  
 
+@media (min-width: 769px) {
+    /* escritorio */
+    .product {
+        flex: 10%
+    }
+}  
 
 
 
@@ -262,7 +305,6 @@ footer i {
 h4{
     text-align: left;
 }
-
 
 
 

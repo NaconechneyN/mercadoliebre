@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link rel= "stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/register.css">
     <script src="https://kit.fontawesome.com/351ca5f3ca.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header class="main-header">
         <div class="main-header-container">
@@ -32,11 +34,11 @@
                     </p>
                 </div>
                 <button class="respmenu" id="toggle-button">
-                    <i class="fas fa-bars"></i>  
+                    <i class="fas fa-bars"></i>
                 </button>
-            </div>   
-    
-    
+            </div>
+
+
             <nav class="main-navbar" id="main-navbar">
                 <ul class="left-nabvar">
                     <li><a href="#">Ofertas</a></li>
@@ -44,7 +46,7 @@
                     <li><a href="#">Vender</a></li>
                     <li><a href="#">Ayuda</a></li>
                 </ul>
-    
+
                 <ul class="rigth-nabvar">
                     <li><a href="./register">Creá tu cuenta <i class="far fa-address-card"></i></a></li></a></li>
                     <li><a href="./login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li></a></li>
@@ -56,50 +58,65 @@
     </header>
 
     <main>
-        <form class="">
+        <form class="form-register">
 
-            <input type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido">
-            <input type="text" name="usuario" id="usuario" placeholder="Nombre de Usuario">
+            <input class="controls" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido">
 
-            <input type="email" name="email" id="email" placeholder="Email">
+            <input class="controls" type="text" name="usuario" id="usuario" placeholder="Nombre de Usuario">
 
-            <label for="fecha">Fecha de Nacimiento</label>
-            <input type="datetime-local" name="fecha" id="fecha" placeholder="dd / mm / yyyy">
+            <input class="controls" type="email" name="email" id="email" placeholder="Email">
 
-            <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
-            
-            <fieldset>
-                <label for="">Perfi de Usuario</label>
+            <label class="form-section" for="fecha">Fecha de Nacimiento</label>
+            <input class="controls" type="datetime-local" name="fecha" id="fecha" placeholder="dd / mm / yyyy">
 
+            <input class="controls" type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
+
+            <fieldset class="breack-form">
+                <label class="form-section" for="">Perfi de Usuario</label><br>
                 <input type="radio" name="perfil" id="comprador" value="0">
                 <label for="comprador">Comprador</label>
                 <input type="radio" name="perfil" id="vendedor" value="1">
                 <label for="vendedor">Vendedor</label>
             </fieldset>
 
-            <fieldset>
-                <label for="">Intereses</label>
+            <fieldset class="breack-form-list">
+                <label class="form-section" for="">Intereses</label>
 
-                <input type="checkbox" name="intereses" id="electro" value="0">
-                <label for="electro">Electro</label>
-                <input type="checkbox" name="intereses" id="moda" value="1">
-                <label for="moda">Moda</label>
-                <input type="checkbox" name="intereses" id="hogar" value="2">
-                <label for="hogar">Hogar</label>
-                <input type="checkbox" name="intereses" id="jugueteria" value="3">
-                <label for="jugueteria">Jugueteria</label>
-                <input type="checkbox" name="intereses" id="vida-sana" value="4">
-                <label for="vida-sana">Vida Sana</label>
+                <div>
+                    <input type="checkbox" name="intereses" id="electro">
+                    <label class="items-intereses" for="electro">Electro</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="intereses" id="moda" value="1">
+                    <label class="items-intereses" for="moda">Moda</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="intereses" id="hogar" value="2">
+                    <label class="items-intereses" for="hogar">Hogar</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="intereses" id="jugueteria" value="3">
+                    <label class="items-intereses" for="jugueteria">Jugueteria</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="intereses" id="vida-sana" value="4">
+                    <label class="items-intereses" for="vida-sana">Vida Sana</label>
+                </div>
+
             </fieldset>
+            <div class="foto">
+                <label for="foto-perfil">Foto de Perfil</label>
+                <input type="file" name="foto-perfil" id="foto-perfil">
+            </div>
 
-            <label for="foto-perfil">Foto de Perfil</label>
-            <input type="file" name="foto-perfil" id="foto-perfil">
 
-            <label for="password">Contraseña</h3>
-            <input type="password" name="password" id="password" placeholder="Ingresá la Contraseña">
-            <input type="password" name="password-repeat" id="password-repeat" placeholder="Repeti la Contraseña">
-
-            <button type="submit">Ok!</button>
+            <div class="password">
+                <label for="password">Contraseña</h3><br>
+                    <input type="password" name="password" id="password" placeholder="Ingresá la Contraseña"><br>
+                    <input type="password" name="password-repeat" id="password-repeat"
+                        placeholder="Repeti la Contraseña">
+                    <button type="submit">Ok!</button>
+            </div>
         </form>
     </main>
 
@@ -115,10 +132,11 @@
                         Pagá con tarjeta o en efectivo
                     </h2>
                     <p class="footer-card__text">
-                        Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!
+                        Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y
+                        siempre es seguro!
                     </p>
                 </div>
-    
+
                 <div class="footer-card">
                     <div class="footer-card__icon">
                         <i class="fas fa-gift"></i>
@@ -127,10 +145,11 @@
                         Envío gratis desde $ 2.500
                     </h2>
                     <p class="footer-card__text">
-                        Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.
+                        Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un
+                        beneficio de Mercado Puntos.
                     </p>
                 </div>
-    
+
                 <div class="footer-card">
                     <div class="footer-card__icon">
                         <i class="fas fa-user-shield"></i>
@@ -139,7 +158,8 @@
                         Seguridad, de principio a fin
                     </h2>
                     <p class="footer-card__text">
-                        ¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.
+                        ¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás
+                        siempre protegid@.
                     </p>
                 </div>
             </div>
@@ -148,5 +168,5 @@
     </footer>
     <script src="./js/index.js"></script>
 </body>
-</html>
 
+</html>

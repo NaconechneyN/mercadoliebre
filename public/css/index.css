@@ -66,9 +66,22 @@ main h2{
     right: 20px;
     top: -15px;
 }
+.product__text-icon{
+    animation: rotacion 2s infinite;
+}
+@keyframes rotacion{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
 
 .icons-cart {
     color: var(--clr-verde);
+
+
 }
 
 .product__text-price {
@@ -100,6 +113,7 @@ main h2{
     margin-top: 1rem;
 }
 
+
 @media (min-width: 361px) {
     /* tablet */
     .flex-container {
@@ -108,9 +122,20 @@ main h2{
     }
 
     .product {
-        box-shadow: 1px 1px 10px #666;
         flex: 40%
     }
+    .product:hover{
+        box-shadow: 1px 1px 10px #666;
+    }
+    .product__text {
+        display: none;
+        transition: 2s;
+    }
+    .product:hover .product__text {
+        display: block;
+        transition: 2s;
+    }
+    
 }  
 
 @media (min-width: 769px) {

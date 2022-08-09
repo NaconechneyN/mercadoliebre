@@ -61,9 +61,11 @@ body{
     align-items: center;
     gap: 8px
 }
+.brand-logo{
+    width: 50%;
+}
 
 .logo{
-    width: 50%;
     cursor: pointer;
 }
 
@@ -81,7 +83,7 @@ body{
     padding-left: 4px;
 }
 
-.buscar button {
+.lupa {
     flex-grow: 2;
     background: white;
     border: none;
@@ -125,18 +127,29 @@ body{
 
     .main-header-top-bar-left {
         flex: 75%;
+        gap: 1rem;
     }
-
+    .brand-logo{
+        width: 30%;
+    }
     .buscar {
         font-size: 12px;
+        width: 70%;
     }
 
     .buscar input {
         flex-grow: 10;
+        padding: 1rem;
     }
     
-    .buscar button {
-        flex-grow: 1;
+    .lupa {
+        flex-grow: 0;
+        padding: 1rem;
+        display: flex;
+    }
+
+    .lupa i{
+        align-self: center;
     }
 
     .main-header-top-bar-rigth {

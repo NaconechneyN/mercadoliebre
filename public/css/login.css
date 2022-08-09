@@ -38,4 +38,7 @@
     background-color: var(--clr-celeste);
     color: var(--clr-gris-claro);
 }
+.control-submit:hover{
+    background-color: #0022AA;
+}
 

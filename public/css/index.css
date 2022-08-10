@@ -122,19 +122,36 @@ main h2{
     }
 
     .product {
-        flex: 40%
+        flex: 40%;
+        transition: 500ms;
     }
+
     .product:hover{
-        box-shadow: 1px 1px 10px #666;
+        box-shadow: 1px 1px 20px #666;
+        transition: 500ms;
     }
-    .product__text {
+
+    .product__text-name{
+        display: none;
+
+    }
+    main div:hover .product__text-name{
+        display: block;
+    }
+
+
+    /*.product__text {
         display: none;
         transition: 2s;
     }
+
     .product:hover .product__text {
         display: block;
         transition: 2s;
-    }
+    }*/
+    /*.product__text-name{
+        display: block;
+    }*/
     
 }  
 

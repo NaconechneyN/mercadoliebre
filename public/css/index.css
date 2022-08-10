@@ -126,32 +126,20 @@ main h2{
         transition: 500ms;
     }
 
-    .product:hover{
-        box-shadow: 1px 1px 20px #666;
-        transition: 500ms;
+    .product:hover {
+        box-shadow: 1px 1px 10px #666;
+        transition: box-shadow 400ms;
     }
 
-    .product__text-name{
-        display: none;
-
-    }
-    main div:hover .product__text-name{
-        display: block;
-    }
-
-
-    /*.product__text {
-        display: none;
-        transition: 2s;
+    .product__text {
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 400ms;
     }
 
     .product:hover .product__text {
-        display: block;
-        transition: 2s;
-    }*/
-    /*.product__text-name{
-        display: block;
-    }*/
+        transform: scaleY(1);
+    }
     
 }  
 

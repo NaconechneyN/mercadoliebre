@@ -1,12 +1,13 @@
 const express = require("express");
 const path = require ("path");
+const dotenv = require("dotenv").config();
 
 const app = express();
 
 app.use(express.static("public"));
 
-app.listen(3000, ()=> {
-    console.log("Servidor corriendo");
+app.listen(process.env.PORT, ()=> {
+    console.log("Servidor corriendo" + process.env.PORT);
 });
 
 app.get("/", (req, res) => {
